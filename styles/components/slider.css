@@ -1,0 +1,119 @@
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+  }
+  .wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    border: 1px solid  var(--clr-light);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper i:first-child{
+    left: -53px;
+  }
+  .wrapper i:last-child{
+    right: -47px;
+  }
+  .wrapper .carusel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 0px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carusel::-webkit-scrollbar {
+    display: none;
+  }
+  .carusel.no-transition {
+    scroll-behavior: auto;
+  }
+  .carusel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carusel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carusel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carusel .card {
+    scroll-snap-align: start;
+    height: 400px;
+    list-style: none;
+    
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+  .carusel .card .img {
+    background: var(--clr-indigo);
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
+  }
+  .card .img img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+  }
+  .carusel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 15px 0 5px;
+  }
+  .carusel .card span {
+    color: var(--clr-slate400);
+    font-size: 1.31rem;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .wrapper .carusel {
+      grid-auto-columns: calc((100% / 2) - 12px);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .wrapper .carusel {
+      margin-left: 15px;
+      grid-auto-columns: 110%;
+    }
+    .wrapper i{
+      margin-left: 14px;
+      border: none;
+    }
+    .carusel .card  h2{
+      margin: 0px 0 5px;
+    }
+    .carusel .card {
+      height: 400px;
+    }
+    .wrapper i:first-child{
+      left: -47px;
+    }
+    .wrapper i:last-child{
+      right: -47px;
+    }
+  }
