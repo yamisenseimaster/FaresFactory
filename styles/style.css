@@ -46,6 +46,7 @@ body {
   font-family: 'General Sans', sans-serif;
   background-color: var(--clr-dark);
   color: var(--clr-light);
+  margin: 33px;
 }
 
 img,
@@ -92,4 +93,9 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: var(--clr-indigo);
   outline: 1px solid var(--clr-indigo);
+}
+@media screen and (max-width: 600){
+  body{
+    margin-left: 34px !important;
+  }
 }
