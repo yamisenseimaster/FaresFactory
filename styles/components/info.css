@@ -126,10 +126,7 @@
       'content6 image6';
     place-items: center;
   }
-  /* .work__description {
-  max-width: none;
 
-} */
 
   .work__image1 {
     grid-area: image1;
