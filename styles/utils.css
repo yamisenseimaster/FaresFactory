@@ -8,15 +8,15 @@
   color: #f1f5f9;
   padding: 0.5em 1em;
   border-radius: 6px;
-  box-shadow: 0 10px 20px rgba(170, 161, 163, 0.5),
-    0 6px 6px rgba(178, 190, 173, 0.5), 0 0 100px -10px var(--clr-indigo);
+  box-shadow: 0 10px 20px rgba(59, 59, 59, 0.5),
+    0 6px 6px rgba(52, 48, 65, 0.5), 0 0 100px -10px var(--clr-indigo);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 28px rgba(240, 240, 240, 0.192),
-    0 10px 10px rgba(255, 255, 255, 0.22), 0 0 120px -10px var(--clr-indigo);
+  box-shadow: 0 14px 28px rgba(69, 45, 100, 0.192),
+    0 10px 10px rgba(41, 32, 46, 0.39), 0 0 120px -10px var(--clr-indigo);
 }
 
 .container {
